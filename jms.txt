@@ -17,3 +17,4 @@ MYDModule
 
 ${ServerRuntime//[weblogic.management.runtime.JMSDurableSubscriberRuntimeMBean]com.bea:JMSDestinationRuntime=MYJMSModule!dizzyworldTopic,JMSServerRuntime=MYJMSServer,Name=<950228.1449744139938.0>_MYTOPICS,ServerRuntime=AdminServer,Type=JMSDurableSubscriberRuntime//MessagesCurrentCount} > 1)
 # First Commit
+# File updated for Gitlab
