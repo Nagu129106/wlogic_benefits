@@ -1,0 +1,67 @@
+D:\Oracle\Middleware\Oracle_Home\user_projects\domains\nag_domain>java weblogic.Deployer -adminurl t3://localhost:8001 -username weblogic -password we
+blogic1 -listApps
+weblogic.Deployer invoked with options:  -adminurl t3://localhost:8001 -username weblogic -listApps
+ OracleProxy4_NAG_CLUSTER_MS3
+ benefits
+ deployments
+Number of Applications Found : 3
+
+D:\Oracle\Middleware\Oracle_Home\user_projects\domains\nag_domain>java weblogic.Deployer -adminurl t3://localhost:8001 -username weblogic -password we
+blogic1 -name benefits -undeploy
+weblogic.Deployer invoked with options:  -adminurl t3://localhost:8001 -username weblogic -name benefits -undeploy
+<Dec 10, 2015 10:58:57 AM IST> <Info> <J2EE Deployment SPI> <BEA-260121> <Initiating undeploy operation for application, benefits [archive: null], to
+configured targets.>
+Task 4 initiated: [Deployer:149026]remove application benefits on AdminServer.
+Task 4 completed: [Deployer:149026]remove application benefits on AdminServer.
+Target state: undeploy completed on Server AdminServer
+
+
+D:\Oracle\Middleware\Oracle_Home\user_projects\domains\nag_domain>java weblogic.Deployer -adminurl t3://localhost:8001 -username weblogic -password we
+blogic1 -listApps
+weblogic.Deployer invoked with options:  -adminurl t3://localhost:8001 -username weblogic -listApps
+ OracleProxy4_NAG_CLUSTER_MS3
+ deployments
+Number of Applications Found : 2
+
+
+D:\Oracle\Middleware\Oracle_Home\user_projects\domains\nag_domain>java weblogic.Deployer -adminurl t3://localhost:8001 -username weblogic -password we
+blogic1 -name benefits -source D:\12cNecessary\benefits.war -appVersion 1001 -targets AdminServer -deploy
+weblogic.Deployer invoked with options:  -adminurl t3://localhost:8001 -username weblogic -name benefits -source D:\12cNecessary\benefits.war -appVers
+ion 1001 -targets AdminServer -deploy
+<Dec 10, 2015 11:03:26 AM IST> <Info> <J2EE Deployment SPI> <BEA-260121> <Initiating deploy operation for application, benefits [archive: D:\12cNecess
+ary\benefits.war], to AdminServer .>
+Task 5 initiated: [Deployer:149026]deploy application benefits [Version=1001] on AdminServer.
+Task 5 completed: [Deployer:149026]deploy application benefits [Version=1001] on AdminServer.
+Target state: deploy completed on Server AdminServer
+
+
+D:\Oracle\Middleware\Oracle_Home\user_projects\domains\nag_domain>java weblogic.Deployer -adminurl t3://localhost:8001 -username weblogic -password we
+blogic1 -listApps
+weblogic.Deployer invoked with options:  -adminurl t3://localhost:8001 -username weblogic -listApps
+ OracleProxy4_NAG_CLUSTER_MS3
+ benefits [Version=1001] <ACTIVE VERSION>
+ deployments
+Number of Applications Found : 3
+
+D:\Oracle\Middleware\Oracle_Home\user_projects\domains\nag_domain>java weblogic.Deployer -adminurl t3://localhost:8001 -username weblogic -password we
+blogic1 -name benefits -source D:\12cNecessary\benefits.war -appVersion 1002 -targets AdminServer -redeploy
+weblogic.Deployer invoked with options:  -adminurl t3://localhost:8001 -username weblogic -name benefits -source D:\12cNecessary\benefits.war -appVers
+ion 1002 -targets AdminServer -redeploy
+<Dec 10, 2015 11:07:52 AM IST> <Info> <J2EE Deployment SPI> <BEA-260121> <Initiating redeploy operation for application, benefits [archive: D:\12cNece
+ssary\benefits.war], to AdminServer .>
+Task 6 initiated: [Deployer:149026]deploy application benefits [Version=1002] on AdminServer.
+Task 6 completed: [Deployer:149026]deploy application benefits [Version=1002] on AdminServer.
+Target state: redeploy completed on Server AdminServer
+
+
+D:\Oracle\Middleware\Oracle_Home\user_projects\domains\nag_domain>java weblogic.Deployer -adminurl t3://localhost:8001 -username weblogic -password we
+blogic1 -name benefits -source D:\12cNecessary\benefits.war -appVersion 1003 -targets AdminServer -redeploy
+weblogic.Deployer invoked with options:  -adminurl t3://localhost:8001 -username weblogic -name benefits -source D:\12cNecessary\benefits.war -appVers
+ion 1003 -targets AdminServer -redeploy
+<Dec 10, 2015 11:08:34 AM IST> <Info> <J2EE Deployment SPI> <BEA-260121> <Initiating redeploy operation for application, benefits [archive: D:\12cNece
+ssary\benefits.war], to AdminServer .>
+[Deployer:149113]Cannot deploy or redeploy application "benefits [Version=1003]" because the maximum number of application versions (2) for applicatio
+n "benefits" has been exceeded. Currently deployed versions are: "1001, 1002".
+
+
+
